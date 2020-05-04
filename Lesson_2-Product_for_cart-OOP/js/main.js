@@ -28,6 +28,10 @@ class ProductList {
     }
   }
 
+  calculateSumOfProducts() {
+    return this.goods.reduce((sum, goods) => sum + goods.price, 0);
+  }
+
   _getTotalSum() {
     let totalSum = 0;
     for (let product of this.goods) {
