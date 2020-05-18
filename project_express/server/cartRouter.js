@@ -23,6 +23,7 @@ router.put('/:id', (req, res) => {
 });
 
 router.delete('/:id', (req, res) => {
+  console.log('delete');
   handler(req, res, 'remove', './server/db/userCart.json');
 });
 
