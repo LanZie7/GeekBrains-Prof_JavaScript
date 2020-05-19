@@ -34,7 +34,7 @@ Vue.component('cart', {
           });
         // удаляется последний товар, если такой имеется
       } else {
-        this.$parent.deleteJson(`/api/cart${item.id_product}`)
+        this.$parent.deleteJson(`/api/cart/${item.id_product}`)
           .then(data => {
             if(data.result === 1) {
               this.cartItems.splice(this.cartItems.indexOf(item), 1);
